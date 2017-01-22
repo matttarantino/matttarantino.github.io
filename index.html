@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="me">
+  <img src="/assets/images/matt.jpg" alt="Matt">
+  <h1>{{ site.name }}</h1>
+  <h2>{{ site.position }}</h2>
+    <div class="links">
+      <ul>
+        {% for social in site.social %}
+          <li>
+            <a href="{{ social[1].link }}" target="_blank">
+              <i class="fa fa-{{ social[0] }}" aria-hidden="true"></i>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="button">
+      <a href="mailto:{{ site.email }}">
+        Contact Me
+      </a>
+    </div>
+</div>

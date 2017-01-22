@@ -1,0 +1,36 @@
+# Site settings
+google_analytics: 'UA-90743906-1'
+
+# SEO settings
+title: 'Matt Tarantino'
+
+# Profile settings
+name: 'Matt Tarantino'
+position: 'Software Developer'
+email: 'matt@matttarantino.com'
+
+social:
+  github:
+    link: 'https://github.com/matttarantino'
+  instagram:
+    link: 'https://instagram.com/matttarantino'
+  twitter:
+    link: 'https://twitter.com/matttarantino'
+  dribbble:
+    link: 'https://dribbble.com/matttarantino'
+  linkedin:
+    link: 'https://linkedin.com/in/matttarantino'
+
+# Build settings
+include: ["_categories"]
+exclude: ["_screenshots", "Gemfile", "Gemfile.lock"]
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Sass
+sass:
+  style: compressed
+  sass_dir: assets/css/
+
+# Gems
+gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]
