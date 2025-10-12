@@ -2,24 +2,51 @@
 layout: default
 ---
 
-<div class="me">
-  <img src="/assets/images/matt.jpg" alt="Matt">
+<img src="/assets/images/me.png" alt="Matt">
+
+<div class="title">
   <h1>{{ site.name }}</h1>
   <h2>{{ site.position }}</h2>
-    <div class="links">
-      <ul>
-        {% for social in site.social %}
-          <li>
-            <a href="{{ social[1].link }}" target="_blank">
-              <i class="fa fa-{{ social[0] }}" aria-hidden="true"></i>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-    <div class="button">
-      <a href="mailto:{{ site.email }}">
-        Contact Me
-      </a>
-    </div>
 </div>
+
+<section>
+  <h3>About Me</h3>
+  <p>
+    Hi, I'm Matt — a Staff Platform Engineer based in NYC. I currently serve as the Technical Lead of Infrastructure and DevOps at <a href="https://www.teepublic.com" target="_blank">TeePublic</a>.
+  </p> 
+</section>
+
+<section>
+  <h3>My Daily Tools</h3>
+  <div class="carousel">
+    <ul class="carousel-track">
+      {% for tool in site.tools %}
+        <li>
+          <i class="{{ tool }}"></i>
+        </li>
+      {% endfor %}
+      {% for tool in site.tools %}
+        <li>
+          <i class="{{ tool }}"></i>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h3>Let's Connect</h3>
+  <ul class="connect">
+    {% for social in site.social %}
+      <li>
+        <a href="{{ social[1].link }}" target="_blank">
+          <i class="fa-brands fa-2x fa-{{ social[0] }}"></i>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<a class="contact" href="mailto:{{ site.email }}">
+  <h3>Email Me</h3>
+</a>
